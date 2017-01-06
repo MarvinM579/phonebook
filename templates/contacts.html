@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block body %}
+{% if session['name'] %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <span class="heading"><h1>Phonebook</h1></span>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
+<table border="1" width="100%">
+    <tr>
+        <th>Name</th>
+        <th>Number</th>
+        <th>Email</th>
+        <th></th>
+    </tr>
+    {% for contact in contacts %}
+    <tr>
+        <td>{{contact.name}}</td>
+        <td>{{contact.phone_number}}</td>
+        <td>{{contact.email}}</td>
+        <td><a href="/update_contact?id={{contact.id}}">Edit</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% else %}
+<!-- <div class="container">
+    <div class="col-md-4"></div>
+    <div class="col-md-4"><span class="heading2"><h1>GO AWAY!</h1></span></div>
+    <div class="col-md-4"></div>
+
+</div> -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <img class="no" src="static/img/angry.png" alt="angry">
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

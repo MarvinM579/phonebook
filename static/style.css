@@ -1,0 +1,42 @@
+/*body {
+  background: antiquewhite;
+  font-family: Helvetica;
+}*/
+
+.nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li {
+  float: left;
+  list-style: none;
+  margin: 10px;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+.heading {
+    text-align: center;
+}
+/*.heading2 {
+    text-align: center;
+}*/
+.jumbotron {
+    margin: 0;
+}
+
+.navbar {
+    margin: 0;
+}
+.no {
+    height: 300px;
+    width: 300px;
+}
